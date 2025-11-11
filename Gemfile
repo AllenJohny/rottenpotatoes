@@ -22,3 +22,4 @@ gem 'sprockets', '~> 3.7'
 
 # You already installed bundler 1.17.3; keep it explicit
 gem 'bundler', '1.17.3'
+gem 'jquery-rails', '~> 4.4'
