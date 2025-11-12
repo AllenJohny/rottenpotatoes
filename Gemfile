@@ -31,3 +31,4 @@ end
 group :development, :test do
   gem 'sqlite3', '~> 1.3.0'
 end
+gem "dockerfile-rails", ">= 1.7", :group => :development
