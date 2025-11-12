@@ -26,5 +26,8 @@ gem 'jquery-rails', '~> 4.4'
 
 group :production do
   gem 'pg', '~> 1.1'
-  gem 'rails_12factor', '~> 0.0.3'
+end
+
+group :development, :test do
+  gem 'sqlite3', '~> 1.3.0'
 end
