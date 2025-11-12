@@ -19,3 +19,6 @@ console_command = '/rails/bin/rails console'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
+[deploy]
+  release_command = "bash -lc 'cd /app && bundle _1.17.3_ exec rake db:migrate RAILS_ENV=production --trace'"
