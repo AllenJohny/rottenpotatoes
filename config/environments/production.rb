@@ -77,3 +77,15 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+
+# Serve static assets directly (Rails 4 vs newer switches)
+config.serve_static_files = true if config.respond_to?(:serve_static_files)
+config.public_file_server.enabled = true if config.respond_to?(:public_file_server)
+
+# Let Rails compile assets at runtime (avoids build-time precompile)
+config.assets.compile = true
+
+# Optional: don’t boot the whole app just to compile assets
+# (helps avoid DB/initializer issues during any precompile step)
+config.assets.initialize_on_precompile = false if config.assets.respond_to?(:initialize_on_precompile)
