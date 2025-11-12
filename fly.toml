@@ -10,12 +10,10 @@ console_command = '/rails/bin/rails console'
 [build]
 
 [http_service]
-  internal_port = 3000
-  force_https = true
-  auto_stop_machines = 'stop'
+  internal_port = 8080
   auto_start_machines = true
+  auto_stop_machines = "stop"
   min_machines_running = 0
-  processes = ['app']
 
 [[vm]]
   memory = '1gb'
